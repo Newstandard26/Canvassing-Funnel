@@ -9,6 +9,11 @@ Google Sheet.
 
 > **Branding:** teal `#3AB5C0` on near-black `#090909`. Fonts: Bebas Neue,
 > Barlow Condensed, Barlow.
+>
+> **Design source:** these blocks reproduce `../reference/landing-page.html`
+> (the original standalone page) — same copy, stats, compensation, animations,
+> and logo — re-packaged as GHL Custom HTML blocks that integrate with a GHL
+> native form, Cloudinary, and a GHL workflow.
 
 ---
 
@@ -17,14 +22,15 @@ Google Sheet.
 | File | What it is | Where it goes |
 |---|---|---|
 | `page1-global-styles.html` | Google Fonts + CSS variables + form theming | **First** block on Page 1 |
-| `page1-hero-section.html` | Hero + stats strip (logo embedded inline) | Page 1, below styles |
-| `page1-how-it-works.html` | Steps + earnings + CTA | Page 1, below hero |
+| `page1-hero-section.html` | Fixed nav + hero + stats strip (real base64 logo embedded) | Page 1, below styles |
+| `page1-how-it-works.html` | "How It Works" steps + "Compensation" cards | Page 1, below hero |
 | `page1-video-recorder.html` | 30-sec recorder + Cloudinary upload + form intercept | Page 1, **directly below the GHL form** |
 | `page2-thankyou.html` | Full "Application Received" page | Page 2 (only block) |
 | `ghl-form-fields.md` | Exact form fields + styling to build in GHL | reference |
 | `ghl-workflow-spec.md` | Step-by-step workflow build | reference |
 | `cloudinary-setup.md` | Get Cloudinary creds + unsigned preset | reference |
 | `README.md` | This walkthrough | reference |
+| `../reference/landing-page.html` | The original standalone landing page this funnel reproduces | reference / design source |
 
 ---
 
@@ -97,7 +103,7 @@ In the funnel builder, add full-width 1-column rows, each containing a
 
 ### 5. Build Page 2 (`/thank-you`)
 Add one full-width 1-column row → **Custom HTML** → paste `page2-thankyou.html`.
-Update the phone number in the footer (`tel:+18005551234` and its label).
+The footer already shows `224-302-1177` — update it if your number changes.
 
 ### 6. Build the workflow
 Follow `ghl-workflow-spec.md` to create **`30 to 300 — New Applicant Alert`**
@@ -156,10 +162,11 @@ GHL's form HTML differs between themes/versions. The recorder needs to find
 - **Do not** re-import jQuery — GHL injects its own.
 - **Do not** add a separate submit button in the recorder; it intercepts GHL's
   button. Adding a second submit button will break the single-submit flow.
-- The logo in the hero/thank-you blocks is an **inline SVG data-URI**
-  placeholder (no external URL, per spec). To use the real NSR white logo,
-  replace the entire `src="data:image/svg+xml..."` value with your base64 PNG:
-  `src="data:image/png;base64,<YOUR_BASE64>"`.
+- The real NSR logo (a 500×500 PNG) is embedded as a **base64 data-URI** in the
+  hero, nav, and thank-you blocks — no external URL (per spec). The canonical
+  copy lives in `../reference/nsr-logo.b64.txt`; if the logo changes, drop the
+  new `data:image/png;base64,…` value into that file and re-paste it into each
+  `src="data:image/png;base64,…"` attribute.
 - The recorder caches the upload, so the JS-triggered re-submit never uploads
   the video twice.
 
