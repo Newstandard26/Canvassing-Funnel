@@ -1,0 +1,186 @@
+<!-- ============================================================= -->
+<!-- NSR 30 to 300 — THANK YOU PAGE (Step 2)                        -->
+<!-- Full-page Custom HTML block. This is the only block on Page 2. -->
+<!-- (You can also drop the global-styles block above it, but this  -->
+<!-- file is self-contained with its own fonts + vars as fallback.) -->
+<!-- Set Page 2 background to #090909 in GHL page settings.         -->
+<!-- ============================================================= -->
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+
+<section class="nsr-ty">
+  <div class="nsr-ty__inner">
+
+    <img
+      class="nsr-ty__logo"
+      alt="New Standard Restoration"
+      src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='72' viewBox='0 0 320 72'><rect x='1' y='1' width='70' height='70' rx='10' fill='none' stroke='%233AB5C0' stroke-width='3'/><text x='36' y='48' font-family='Arial Black, Arial, sans-serif' font-size='34' font-weight='900' fill='%23ffffff' text-anchor='middle'>NSR</text><text x='90' y='32' font-family='Arial, sans-serif' font-size='22' font-weight='800' fill='%23ffffff'>NEW STANDARD</text><text x='90' y='58' font-family='Arial, sans-serif' font-size='22' font-weight='800' fill='%233AB5C0'>RESTORATION</text></svg>"
+    />
+
+    <div class="nsr-ty__check" aria-hidden="true">
+      <svg viewBox="0 0 52 52" width="52" height="52">
+        <circle cx="26" cy="26" r="24" fill="none" stroke="#3AB5C0" stroke-width="3"/>
+        <path fill="none" stroke="#3AB5C0" stroke-width="4" stroke-linecap="round"
+              stroke-linejoin="round" d="M15 27 l8 8 l16 -18"/>
+      </svg>
+    </div>
+
+    <div class="nsr-ty__eyebrow">Application Received</div>
+    <h1 class="nsr-ty__title">You're In The Pipeline</h1>
+
+    <p class="nsr-ty__sub">
+      Thanks for applying to the <strong>30&nbsp;to&nbsp;300 Program</strong>.
+      Your application and video introduction were received and sent straight
+      to our hiring team.
+    </p>
+
+    <div class="nsr-ty__next">
+      <h2 class="nsr-ty__next-title">What Happens Next</h2>
+      <ul class="nsr-ty__steps">
+        <li><span>1</span> Our team reviews your video introduction.</li>
+        <li><span>2</span> Qualified applicants get a call or text within <strong>24&ndash;48 hours</strong>.</li>
+        <li><span>3</span> We schedule your interview and kick off training.</li>
+      </ul>
+    </div>
+
+    <p class="nsr-ty__note">
+      Keep your phone handy &mdash; make sure to answer unknown numbers over the
+      next couple of days.
+    </p>
+
+    <div class="nsr-ty__footer">
+      <a class="nsr-ty__phone" href="tel:+18005551234">Questions? Call us: (800) 555-1234</a>
+      <div class="nsr-ty__copy">© <span id="nsrYear"></span> New Standard Restoration. All rights reserved.</div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* Self-contained fallback vars so this page works standalone */
+  .nsr-ty {
+    --black: #090909;
+    --gray1: #111111;
+    --gray2: #1a1a1a;
+    --teal: #3AB5C0;
+    --teal-dark: #1f8c96;
+    --muted: rgba(255,255,255,0.55);
+    --line: rgba(255,255,255,0.1);
+
+    background:
+      radial-gradient(1000px 460px at 50% -10%, rgba(58,181,192,0.18), transparent 60%),
+      var(--black);
+    min-height: 100vh;
+    font-family: 'Barlow', sans-serif;
+    color: #fff;
+    padding: 70px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nsr-ty__inner { max-width: 640px; width: 100%; text-align: center; }
+  .nsr-ty__logo { width: 260px; max-width: 70%; height: auto; margin: 0 auto 34px; display: block; }
+
+  .nsr-ty__check {
+    width: 92px; height: 92px;
+    margin: 0 auto 26px;
+    border-radius: 50%;
+    background: rgba(58,181,192,0.10);
+    border: 2px solid var(--teal);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .nsr-ty__check path {
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: nsrDraw .6s ease forwards .25s;
+  }
+  @keyframes nsrDraw { to { stroke-dashoffset: 0; } }
+
+  .nsr-ty__eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--teal);
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .nsr-ty__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 8vw, 72px);
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 18px;
+  }
+  .nsr-ty__sub {
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.78);
+    margin: 0 auto 34px;
+    max-width: 520px;
+  }
+  .nsr-ty__sub strong { color: #fff; }
+
+  .nsr-ty__next {
+    background: var(--gray1);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 28px 26px;
+    text-align: left;
+    margin-bottom: 26px;
+  }
+  .nsr-ty__next-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--teal);
+    margin: 0 0 16px;
+    text-align: center;
+  }
+  .nsr-ty__steps { list-style: none; margin: 0; padding: 0; }
+  .nsr-ty__steps li {
+    display: flex; align-items: flex-start; gap: 14px;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.5;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .nsr-ty__steps li:last-child { border-bottom: none; }
+  .nsr-ty__steps li span {
+    flex: 0 0 28px;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: rgba(58,181,192,0.15);
+    border: 1px solid var(--teal-dark);
+    color: var(--teal);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+  }
+
+  .nsr-ty__note { color: var(--muted); font-size: 15px; margin: 0 auto 40px; max-width: 480px; }
+
+  .nsr-ty__footer { border-top: 1px solid var(--line); padding-top: 24px; }
+  .nsr-ty__phone {
+    display: inline-block;
+    color: var(--teal);
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  .nsr-ty__copy { color: var(--muted); font-size: 13px; }
+</style>
+
+<script>
+  (function () {
+    var y = document.getElementById('nsrYear');
+    if (y) y.textContent = new Date().getFullYear();
+  })();
+</script>

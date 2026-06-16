@@ -1,0 +1,172 @@
+<!-- ============================================================= -->
+<!-- NSR 30 to 300 — HERO SECTION + STATS STRIP                     -->
+<!-- 1-column, full-width Custom HTML block. Place directly below   -->
+<!-- the global styles block.                                       -->
+<!--                                                                 -->
+<!-- LOGO: The <img> below uses an inline SVG data-URI placeholder   -->
+<!-- so there is NO external URL (per spec). To use the real NSR     -->
+<!-- white logo, replace the entire src="data:image/svg+xml..."     -->
+<!-- value with your base64 PNG: src="data:image/png;base64,XXXX".   -->
+<!-- ============================================================= -->
+
+<section class="nsr-hero">
+  <div class="nsr-hero__inner">
+
+    <img
+      class="nsr-hero__logo"
+      alt="New Standard Restoration"
+      src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='72' viewBox='0 0 320 72'><rect x='1' y='1' width='70' height='70' rx='10' fill='none' stroke='%233AB5C0' stroke-width='3'/><text x='36' y='48' font-family='Arial Black, Arial, sans-serif' font-size='34' font-weight='900' fill='%23ffffff' text-anchor='middle'>NSR</text><text x='90' y='32' font-family='Arial, sans-serif' font-size='22' font-weight='800' fill='%23ffffff'>NEW STANDARD</text><text x='90' y='58' font-family='Arial, sans-serif' font-size='22' font-weight='800' fill='%233AB5C0'>RESTORATION</text></svg>"
+    />
+
+    <div class="nsr-hero__badge">Now Hiring &mdash; Field Sales Reps</div>
+
+    <h1 class="nsr-hero__title">
+      Go From <span class="nsr-hero__accent">30</span> Doors
+      to <span class="nsr-hero__accent">300</span> Deals
+    </h1>
+
+    <p class="nsr-hero__sub">
+      The 30&nbsp;to&nbsp;300 Program is New Standard Restoration's proven path
+      for driven people to build a high-income career in storm &amp; restoration
+      sales &mdash; no experience required. We train you, you knock, you earn.
+    </p>
+
+    <a href="#nsr-apply" class="nsr-hero__cta">Apply &amp; Record Your Intro</a>
+
+  </div>
+
+  <!-- STATS STRIP -->
+  <div class="nsr-stats">
+    <div class="nsr-stats__inner">
+      <div class="nsr-stat">
+        <div class="nsr-stat__num">$300K+</div>
+        <div class="nsr-stat__label">Top Rep Annual Earnings</div>
+      </div>
+      <div class="nsr-stat">
+        <div class="nsr-stat__num">100%</div>
+        <div class="nsr-stat__label">Commission &amp; Bonuses</div>
+      </div>
+      <div class="nsr-stat">
+        <div class="nsr-stat__num">0</div>
+        <div class="nsr-stat__label">Experience Required</div>
+      </div>
+      <div class="nsr-stat">
+        <div class="nsr-stat__num">24&ndash;48h</div>
+        <div class="nsr-stat__label">Application Response</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .nsr-hero {
+    background:
+      radial-gradient(1200px 500px at 50% -10%, rgba(58,181,192,0.18), transparent 60%),
+      var(--black);
+    font-family: 'Barlow', sans-serif;
+    padding: 64px 20px 0;
+    text-align: center;
+    color: var(--white);
+  }
+  .nsr-hero__inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding-bottom: 56px;
+  }
+  .nsr-hero__logo {
+    width: 280px;
+    max-width: 70%;
+    height: auto;
+    margin: 0 auto 30px;
+    display: block;
+  }
+  .nsr-hero__badge {
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: var(--teal);
+    border: 1px solid var(--teal-dark);
+    border-radius: 999px;
+    padding: 8px 18px;
+    margin-bottom: 26px;
+  }
+  .nsr-hero__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-size: clamp(48px, 9vw, 96px);
+    line-height: 0.95;
+    letter-spacing: 1px;
+    margin: 0 0 22px;
+    text-transform: uppercase;
+  }
+  .nsr-hero__accent { color: var(--teal); }
+  .nsr-hero__sub {
+    font-size: clamp(16px, 2.2vw, 20px);
+    line-height: 1.6;
+    color: rgba(255,255,255,0.78);
+    max-width: 680px;
+    margin: 0 auto 34px;
+  }
+  .nsr-hero__cta {
+    display: inline-block;
+    background: var(--teal);
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+    padding: 16px 40px;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(58,181,192,0.35);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .nsr-hero__cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 38px rgba(58,181,192,0.5);
+  }
+
+  .nsr-stats {
+    background: var(--gray1);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 0 20px;
+  }
+  .nsr-stats__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .nsr-stat {
+    padding: 34px 16px;
+    text-align: center;
+    border-right: 1px solid var(--line);
+  }
+  .nsr-stat:last-child { border-right: none; }
+  .nsr-stat__num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(34px, 5vw, 52px);
+    color: var(--teal);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .nsr-stat__label {
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  @media (max-width: 720px) {
+    .nsr-stats__inner { grid-template-columns: repeat(2, 1fr); }
+    .nsr-stat:nth-child(2) { border-right: none; }
+    .nsr-stat:nth-child(1),
+    .nsr-stat:nth-child(2) { border-bottom: 1px solid var(--line); }
+  }
+</style>

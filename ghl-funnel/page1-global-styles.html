@@ -1,0 +1,96 @@
+<!-- ============================================================= -->
+<!-- NSR 30 to 300 — GLOBAL STYLES BLOCK                            -->
+<!-- Place this as the FIRST 1-column, full-width Custom HTML block -->
+<!-- at the very top of Page 1 (and reuse on Page 2 if desired).    -->
+<!-- Loads Google Fonts + defines CSS variables used by every block.-->
+<!-- ============================================================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --black: #090909;
+    --gray1: #111111;
+    --gray2: #1a1a1a;
+    --teal: #3AB5C0;
+    --teal-dark: #1f8c96;
+    --white: #ffffff;
+    --muted: rgba(255, 255, 255, 0.55);
+    --line: rgba(255, 255, 255, 0.1);
+  }
+
+  /* Force the funnel page background dark so there are no white gaps
+     between custom HTML rows. (Also set page bg to #090909 in GHL
+     page settings — this is a belt-and-suspenders fallback.) */
+  body,
+  #wrapper,
+  .container-fluid,
+  .c-section,
+  .row-fluid,
+  .row {
+    background-color: var(--black) !important;
+  }
+
+  /* Shared type + box-sizing reset scoped to our NSR blocks */
+  [class^="nsr-"],
+  [class*=" nsr-"] {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .nsr-font-display { font-family: 'Bebas Neue', sans-serif; }
+  .nsr-font-cond    { font-family: 'Barlow Condensed', sans-serif; }
+  .nsr-font-body    { font-family: 'Barlow', sans-serif; }
+
+  /* Helper to brand the GHL native form to match the page.
+     GHL renders the form into .hl-form / [id^="form-"] — these
+     selectors style it without needing to touch the form builder.
+     Adjust if your form wrapper class differs (check DevTools). */
+  .hl-form,
+  form[id^="form-"] {
+    background: var(--gray1) !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 14px !important;
+    padding: 28px !important;
+    font-family: 'Barlow', sans-serif !important;
+  }
+
+  .hl-form label,
+  form[id^="form-"] label {
+    color: var(--teal) !important;
+    font-family: 'Barlow Condensed', sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: .5px !important;
+    text-transform: uppercase !important;
+  }
+
+  .hl-form input,
+  .hl-form select,
+  form[id^="form-"] input,
+  form[id^="form-"] select {
+    background: var(--gray2) !important;
+    border: 1px solid var(--line) !important;
+    color: var(--white) !important;
+    border-radius: 8px !important;
+  }
+
+  .hl-form input::placeholder,
+  form[id^="form-"] input::placeholder {
+    color: var(--muted) !important;
+  }
+
+  .hl-form .hl-btn,
+  .hl-form button[type="submit"],
+  form[id^="form-"] button[type="submit"] {
+    background: var(--teal) !important;
+    color: var(--white) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-family: 'Barlow Condensed', sans-serif !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+  }
+</style>
