@@ -1,0 +1,69 @@
+<!-- ============================================================= -->
+<!-- NSR 30 to 300 — HOW IT WORKS + COMPENSATION                    -->
+<!-- 1-column, full-width Custom HTML block. Place below the hero.  -->
+<!-- Mirrors reference/landing-page.html copy exactly.             -->
+<!-- ============================================================= -->
+
+<section class="nsr-sec">
+  <div class="nsr-sec__label">The Program</div>
+  <div class="nsr-sec__title">How It Works</div>
+  <div class="nsr-sec__body">No experience required. No wasted weeks in training before you earn. We put you in the field from day one and pay you to prove yourself.</div>
+  <div class="nsr-steps">
+    <div class="nsr-step"><div class="nsr-step__num">01</div><div class="nsr-step__title">Hit the Doors</div><div class="nsr-step__desc">You're assigned a territory and start knocking immediately. Introduce NSR, let homeowners know we're working nearby, and book a free inspection.</div></div>
+    <div class="nsr-step"><div class="nsr-step__num">02</div><div class="nsr-step__title">Get Paid to Train</div><div class="nsr-step__desc">Every lead you generate puts $25 in your pocket. Close a job and earn 5% of gross profit. You're building income while you build your skills.</div></div>
+    <div class="nsr-step"><div class="nsr-step__num">03</div><div class="nsr-step__title">Earn Your Spot</div><div class="nsr-step__desc">Hit 300 doors in 30 days with a 30%+ conversion rate and you earn a full-time Project Manager position with complete onboarding.</div></div>
+  </div>
+</section>
+
+<div class="nsr-divider"></div>
+
+<section class="nsr-sec">
+  <div class="nsr-sec__label">Compensation</div>
+  <div class="nsr-sec__title">You Set Your Income</div>
+  <div class="nsr-sec__body">Most people your age are getting paid minimum wage to show up. Here, your hustle is your paycheck.</div>
+  <div class="nsr-earn">
+    <div class="nsr-earn__card" data-bg="$25"><div class="nsr-earn__amt">$25</div><div class="nsr-earn__lbl">Per Lead Generated</div><div class="nsr-earn__detail">Every time you book a homeowner for a free inspection, $25 hits your earnings. No sale required. Just the lead.</div></div>
+    <div class="nsr-earn__card" data-bg="5%"><div class="nsr-earn__amt">5%</div><div class="nsr-earn__lbl">Gross Profit on Closed Jobs</div><div class="nsr-earn__detail">When a lead you generated turns into a signed job, you earn 5% of gross profit — on top of your lead fee.</div></div>
+  </div>
+</section>
+
+<div class="nsr-divider"></div>
+
+<style>
+  .nsr-sec {
+    padding: 80px 24px; max-width: 1100px; margin: 0 auto;
+    font-family: 'Barlow', sans-serif; color: #fff; background: var(--black);
+  }
+  .nsr-sec__label { font-size: 12px; font-weight: 700; letter-spacing: 4px; color: var(--teal); text-transform: uppercase; margin-bottom: 12px; }
+  .nsr-sec__title { font-family: 'Bebas Neue', sans-serif; font-size: 52px; letter-spacing: 2px; line-height: 1; color: #fff; margin-bottom: 16px; }
+  .nsr-sec__body { font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.65); max-width: 640px; }
+
+  .nsr-steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 48px; }
+  .nsr-step { background: var(--gray2); border: 1px solid rgba(58,181,192,0.12); padding: 28px 24px; transition: border-color .2s; }
+  .nsr-step:hover { border-color: rgba(58,181,192,0.35); }
+  .nsr-step__num { font-family: 'Bebas Neue', sans-serif; font-size: 64px; line-height: 1; color: rgba(58,181,192,0.15); margin-bottom: 8px; }
+  .nsr-step__title { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 800; letter-spacing: 1px; color: #fff; text-transform: uppercase; margin-bottom: 8px; }
+  .nsr-step__desc { font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.6; }
+
+  .nsr-earn { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
+  .nsr-earn__card {
+    background: linear-gradient(135deg, #0d1a1c, #111);
+    border: 1px solid rgba(58,181,192,0.25);
+    padding: 32px 28px; position: relative; overflow: hidden;
+  }
+  .nsr-earn__card::before {
+    content: attr(data-bg); position: absolute; right: 16px; bottom: -10px;
+    font-family: 'Bebas Neue', sans-serif; font-size: 110px;
+    color: rgba(58,181,192,0.05); line-height: 1; pointer-events: none;
+  }
+  .nsr-earn__amt { font-family: 'Bebas Neue', sans-serif; font-size: 72px; color: var(--teal); line-height: 1; margin-bottom: 6px; }
+  .nsr-earn__lbl { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; letter-spacing: 1px; color: #fff; text-transform: uppercase; margin-bottom: 8px; }
+  .nsr-earn__detail { font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.6; }
+
+  .nsr-divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(58,181,192,0.3), transparent); margin: 0 48px; }
+
+  @media (max-width: 720px) {
+    .nsr-steps { grid-template-columns: 1fr; }
+    .nsr-earn { grid-template-columns: 1fr; }
+  }
+</style>
